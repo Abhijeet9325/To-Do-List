@@ -1,6 +1,8 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { v4 as uuidv4 } from 'uuid';
+import { AiFillDelete } from "react-icons/ai";
+import { MdEdit } from "react-icons/md";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -90,8 +92,8 @@ function App() {
               <div className={item.isCompleted ? "line-through" : ""}>{item.Todo}</div>
             </div>
             <div className="button">
-              <button onClick={(e) => { handleEdit(e, item.id) }} className="font-semibold py-1 rounded-md mx-1 hover:bg-violet-800 cursor-pointer px-4 w-fit bg-violet-700 text-white">Edit</button>
-              <button onClick={(e) => { handleDelete(e, item.id) }} className="font-semibold py-1 rounded-md mx-1 hover:bg-violet-800 cursor-pointer px-4 w-fit bg-violet-700 text-white">Delete</button>
+              <button onClick={(e) => { handleEdit(e, item.id) }} className="font-semibold py-1.5 rounded-md mx-1 hover:bg-violet-800 cursor-pointer px-4 w-fit bg-violet-700 text-white"><MdEdit /></button>
+              <button onClick={(e) => { handleDelete(e, item.id) }} className="font-semibold py-1.5 rounded-md mx-1 hover:bg-violet-800 cursor-pointer px-4  w-fit bg-violet-700 text-white"><AiFillDelete /></button>
             </div>
           </div>
         })}
